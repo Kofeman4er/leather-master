@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -61,10 +61,13 @@ const titles = [
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-orange-500">Custom Gear for Riders & Bikers</h1>
           <p className="text-lg md:text-xl mb-6 text-gray-300">Handcrafted leather equipment tailored just for you.</p>
           <div className="space-x-4">
-            <Link href="/services">
-              <Button className="bg-orange-700 hover:bg-orange-800 text-white px-6 py-3 text-lg font-semibold rounded-lg">Explore Services</Button>
+            <Link href="#service">
+              <Button className="bg-orange-700 hover:bg-orange-800 text-white px-6 py-3 text-lg font-semibold rounded-lg">Bike Services</Button>
             </Link>
-            <Link href="/contact">
+            <Link href="#service2">
+              <Button className="bg-orange-700 hover:bg-orange-800 text-white px-6 py-3 text-lg font-semibold rounded-lg">Horseriding Services</Button>
+            </Link>
+            <Link href="#contact">
               <Button variant="outline" className="text-orange-500 border-orange-500 px-6 py-3 text-lg font-semibold rounded-lg">Contact Us</Button>
             </Link>
           </div>

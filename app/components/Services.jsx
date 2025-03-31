@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Wrench, ShieldCheck, Bike, Hammer, SprayCan, Package } from "lucide-react"; 
 import { Medal, Scissors, Feather, BookImage, SquareScissors, Paperclip } from "lucide-react";
 
@@ -26,7 +26,7 @@ const horseServices = [
 
 export default function Services() {
   return (
-    <section className="w-full py-16 bg-gray-200 text-black">
+    <section className="w-full py-16 bg-gray-900 text-black" id='service'>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-orange-500 text-center mb-12">
           Our Services
@@ -34,7 +34,7 @@ export default function Services() {
 
         {/* Bike Riders Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-semibold text-black mb-8 text-center">
+          <h3 className="text-3xl font-semibold text-white mb-8 text-center">
             For Bike Riders
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -52,10 +52,12 @@ export default function Services() {
             ))}
           </div>
         </div>
-
+            
+            <section className="w-full py-16 bg-gray-900 text-black" id='service2'>
+            </section>
         {/* Horse Riders Section */}
-        <div>
-          <h3 className="text-3xl font-semibold text-black mb-8 text-center">
+        <div >
+          <h3 className="text-3xl font-semibold text-white mb-8 text-center">
             For Horse Riders
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
