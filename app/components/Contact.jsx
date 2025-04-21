@@ -44,15 +44,15 @@ const Contact = () => {
         onSubmit={onSubmit} className='max-w-2xl mx-auto'>
             <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
                 <input 
-                type="text" placeholder='Enter your name' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='name'/>
+                type="text" placeholder='Enter your name' required className='flex-1 p-3 outline-none border-[0.5px] border-orange-600 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='name'/>
                 <input 
-                type="email" placeholder='Enter your email' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='email'/>
+                type="email" placeholder='Enter your email' required className='flex-1 p-3 outline-none border-[0.5px] border-orange-600 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='email'/>
             </div>
             <textarea 
-            rows='6' placeholder='Enter your message' required className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90' name='message'></textarea>
+            rows='6' placeholder='Enter your message' required className='w-full p-4 outline-none border-[0.5px] border-orange-600 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90' name='message'></textarea>
 
             <button 
-            type='submit' className='cursor-pointer py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'>Submit now</button>
+            type='submit' className='cursor-pointer px-6 py-3 w-max flex items-center justify-between transition gap-2 bg-black/80 rounded text-white font-semibold mx-auto border border-orange-600 hover:bg-orange-600'>Submit now</button>
 
             <p className='mt-4 text-white'>{result}</p>
         </form>

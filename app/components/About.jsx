@@ -1,23 +1,35 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function About() {
   return (
-    <section className="w-full py-16 bg-gray-900 text-white" id='about'>
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">About Us</h2>
-        <p className="text-lg md:text-xl text-gray-300 mb-8">
-          With great attention to detail, organization and the "big picture" achieving the goal to its highest level of completion is and always has been my greatest asset and downfall.
-          Having been trained in the Veterinary Medical field determination and desire for the greater good has driven my personal and professional attributes to great heights.
-          My greatest objective in all my endeavors (be it professional, educational, or personal) is to share my experience and training, all the while learning new techniques, skills, and perspectives of my peers.
-        </p>
-        <p className="text-lg md:text-xl text-gray-300 mb-8">
-          An Edmonton based service where your riding apparel and accessories come for repair /cleaning/alterations.( Equine and Motorcycle related)
+    <section className="bg-gray-900 text-white py-16 px-6" id='about'>
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        {/* Image */}
+        <div className="lg:w-1/2 w-full">
+          <Image
+            src="https://i.pravatar.cc/100?img=1"
+            alt="Workshop"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-xl object-cover"
+          />
+        </div>
 
-          All repairs in the fairing repair sector are completed with the 12 years experience techniques of Geo-synthetics Plastic Welding services.
-          All repairs and alterations completed by sophisticated and trained seamstress of Industrial Geo-textile Fabrication and design.
-          High tensile fire retardant industrial threading and Industrial Geo textile repair/design techniques combined with availability of leather /textile motorcycle and Equine related accessories.
-        </p>
-
+        {/* Content */}
+        <div className="lg:w-1/2 w-full">
+          <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-6">About Me</h2>
+          <p className="text-gray-300 text-lg mb-4">
+            With over two decades of experience, I specialize in creating high-quality, durable, and custom gear for both horse riders and bikers. My passion lies in combining traditional leatherwork techniques with modern materials to deliver truly personal and functional results.
+          </p>
+          <p className="text-gray-300 text-lg mb-4">
+            From handcrafted saddles to rugged biker jackets, plastic welding repairs to textile manufacturing — every project is treated with precision, pride, and craftsmanship built on years of dedication.
+          </p>
+          <p className="text-gray-300 text-lg">
+            Whether you're a rider, builder, or enthusiast, I'm here to provide gear that not only meets your needs but exceeds your expectations.
+          </p>
+        </div>
       </div>
     </section>
   );

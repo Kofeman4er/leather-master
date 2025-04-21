@@ -1,39 +1,73 @@
 'use client';
 
-import React from 'react'
-import { Mail } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
-import Logo from './assets/img/logoipsum.svg';
+import logo from './assets/img/logoipsum.svg';
+import { Facebook, Instagram, Youtube, Mail } from 'lucide-react';
 
-const Footer = () => {
+export default function Footer() {
     return (
-        <div className='bg-gray-900'>
-            <div className='text-center text-white'>
-                <Image
-                    src={Logo}
-                    alt=""
-                    width={50}
-                    height={50}
-                    className="w-36 mx-auto mb-2 text-white"
-                />
+        <footer className="bg-gray-950 text-gray-300 py-10 px-6">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start sm:items-center">
+                {/* Column 0 - Logo */}
+                <div className="flex items-center">
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        width={100}
+                        height={100}
+                        className="object-contain"
+                    />
+                </div>
 
-                <div className='w-max flex items-center gap-2 mx-auto text-white'>
-                    <Mail alt='' className='w-6  color="white' />
-                    test@test.com
+                {/* Column 1 */}
+                <div className="text-center md:text-left">
+                    <h3 className="text-xl font-semibold text-white mb-4">About</h3>
+                    <p className="text-sm">
+                        Crafting high-quality, custom equipment for horse riders and bikers. Experienced in leatherwork, welding, and textile manufacturing.
+                    </p>
+                </div>
+
+
+                {/* Column 2 */}
+                <div className="text-center md:text-left">
+                    <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
+                    <ul className="space-y-2 text-sm">
+                        <li><Link href="/" className="hover:text-orange-400">Home</Link></li>
+                        <li><Link href="/about" className="hover:text-orange-400">About</Link></li>
+                        <li><Link href="/services" className="hover:text-orange-400">Services</Link></li>
+                        <li><Link href="/contact" className="hover:text-orange-400">Contact</Link></li>
+                    </ul>
+                </div>
+
+                {/* Column 3 */}
+                <div className="text-center md:text-left">
+                    <h3 className="text-xl font-semibold text-white mb-4">Contact</h3>
+                    <p className="text-sm">Email: info@customcraftsman.com</p>
+                    <p className="text-sm">Phone: +1 (234) 567-8901</p>
+                    <p className="text-sm">Location: Alberta, Canada</p>
+
+                    {/* Socials */}
+                    <div className="flex gap-4 mt-4">
+                        <Link href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <Facebook className="text-gray-300 hover:text-orange-400" size={24} />
+                        </Link>
+                        <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <Instagram className="text-gray-300 hover:text-orange-400" size={24} />
+                        </Link>
+                        <Link href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <Youtube className="text-gray-300 hover:text-orange-400" size={24} />
+                        </Link>
+                        <Link href="mailto:info@customcraftsman.com" aria-label="Email">
+                            <Mail className="text-gray-300 hover:text-orange-400" size={24} />
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6 text-white'>
-                <p>© 2025 Bike&Horse. All rights reserved.</p>
-                <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0 text-white'>
-                    <li><a target="_blank" href="">Instagram</a></li>
-                    <li><a target="_blank" href="">Telegram</a></li>
-                    <li><a target="_blank" href="">Twitter</a></li>
-                </ul>
+            <div className="text-center mt-10 border-t border-gray-700 pt-6 text-sm text-gray-500">
+                &copy; {new Date().getFullYear()} Custom Craftsman. All rights reserved.
             </div>
-
-        </div>
-    )
+        </footer>
+    );
 }
-
-export default Footer
