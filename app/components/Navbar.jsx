@@ -16,15 +16,16 @@ export default function Home() {
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-3">
             <Image
+              href="/"
               src={Logo}
               alt="Logo"
               width={120}
               height={40}
               className="rounded"
             />
-            <Link href="/">
+            
               <span className="text-2xl font-bold cursor-pointer">Riders repair and alterations</span>
-            </Link>
+            
           </div>
 
           <div className="hidden md:flex space-x-6">

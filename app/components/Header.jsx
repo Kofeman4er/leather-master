@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="lg:w-1/2 w-full flex justify-center">
           <Image
-            src="https://i.pravatar.cc/100?img=1"
+            src="https://picsum.photos/id/146/800/500"
             alt="Leather work example"
             width={600}
             height={400}

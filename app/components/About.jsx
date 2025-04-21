@@ -9,7 +9,7 @@ export default function About() {
         {/* Image */}
         <div className="lg:w-1/2 w-full">
           <Image
-            src="https://i.pravatar.cc/100?img=1"
+            src="https://picsum.photos/id/40/800/500"
             alt="Workshop"
             width={600}
             height={400}
