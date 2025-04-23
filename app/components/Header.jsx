@@ -15,18 +15,18 @@ export default function Home() {
           <p className="text-lg text-gray-300 mb-6">
             Precision handmade gear for horse riders, bikers, and custom industrial needs. Backed by decades of experience in leatherwork, welding, and textile manufacturing.
           </p>
-          <div className="flex gap-4">
-            <Link href="#services">
-              <span className="bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded text-white font-semibold cursor-pointer">
-                Explore Services
-              </span>
-            </Link>
-            <Link href="#contact">
-              <span className="border border-orange-600 hover:bg-orange-600 transition px-6 py-3 rounded text-white font-semibold cursor-pointer">
-                Contact Me
-              </span>
-            </Link>
-          </div>
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none">
+  <Link href="#services" className="w-full sm:w-auto">
+    <span className="block text-center bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded text-white font-semibold cursor-pointer w-full">
+      Explore Services
+    </span>
+  </Link>
+  <Link href="#contact" className="w-full sm:w-auto">
+    <span className="block text-center border border-orange-600 hover:bg-orange-600 transition px-6 py-3 rounded text-white font-semibold cursor-pointer w-full">
+      Contact Me
+    </span>
+  </Link>
+</div>
         </div>
         <div className="lg:w-1/2 w-full flex justify-center">
           <Image
