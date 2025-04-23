@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import Logo from './assets/img/logoipsum.svg';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -22,11 +24,20 @@ export default function Navbar() {
   }, [navHeight]);
 
   return (
-    <nav id="main-navbar" className="fixed top-0 left-0 w-full bg-black text-white shadow-lg z-50">
+    <nav id="main-navbar" className="fixed top-0 left-0 w-full bg-black text-white shadow-lg z-50 border-b border-black">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <Link href="/">
-          <span className="text-2xl font-bold cursor-pointer">Custom Gear</span>
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="#header" className="transition-opacity duration-300 hover:opacity-80">
+            <Image
+              src={Logo}
+              alt="Logo"
+              width={120}
+              height={40}
+              className="rounded cursor-pointer"
+            />
+          </Link>
+          <span className="text-2xl font-bold hidden sm:inline select-none">Riders repair and alterations</span>
+        </div>
 
         <div className="hidden md:flex space-x-6">
           <Link href="#about" className="hover:text-orange-500">About</Link>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="bg-gray-900 text-white min-h-screen">
+    <main className="bg-gray-900 text-white min-h-screen" id = "header">
       {/* Hero Section */}
       <section className="flex flex-col lg:flex-row items-center justify-between px-6 py-20 max-w-7xl mx-auto gap-10">
         <div className="lg:w-1/2">
